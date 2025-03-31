@@ -308,8 +308,9 @@ nav {
 
     .team-section-members {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 2%;
+        grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+        margin: auto;
         padding: 0 1%;
 
         .team-member {
@@ -327,11 +328,15 @@ nav {
                     color: var(--primary-color);
                     transition: ease-in-out 0.3s;
                 }
+                .team-member-title h4 {
+                    color: var(--dark-color);
+                    transition: ease-in-out 0.3s;
+                }
             }
 
             .team-member-photo img {
                 width: 100%;
-                max-width: 360px; /* limita el ancho */
+                max-width: auto;
                 height: auto; 
                 object-fit: cover;
                 border: solid var(--light-color);

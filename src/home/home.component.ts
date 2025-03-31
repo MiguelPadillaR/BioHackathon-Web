@@ -13,15 +13,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentYear: number = new Date().getFullYear();
 
   private onScroll = () => {
-    console.log('Scroll detected'); 
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (menu) {
       if (window.scrollY > 100) {
         menu.style.height = '100px';
         menu.style.visibility = 'visible';
       } else {
-        this.isDiscoverVisible.set(false);
-        console.log('isDiscoverVisible', this.isDiscoverVisible()); 
         menu.style.height = '0';
         menu.style.visibility = 'hidden';
       }
@@ -33,6 +30,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (discoverSection) {
       if (window.scrollY > 100 && discoverSection.style.height !== '0px') {
         discoverSection.style.height = '0px';
+
+        document.body.style.pointerEvents = 'none';
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          document.body.style.pointerEvents = 'auto';
+          document.body.style.overflow = '';
+        }, 2000);
+        
       } else if (window.scrollY <= 100 && discoverSection.style.height !== 'auto') {
         discoverSection.style.height = '100vh';
       }
@@ -52,9 +57,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent): void {
     const menu = document.getElementById('menu');
-    console.log("event.clientY", event.clientY);
     if (menu) {
-      if (event.clientY <= 50) {
+      if (event.clientY <= 5000 && !this.isDiscoverVisible()) {
         menu.style.height = '100px';
         menu.style.visibility = 'visible';
       } else {
@@ -68,10 +72,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   makeDiscoverSectionVisible() {
     if (window.scrollY < 100) {
       this.isDiscoverVisible.set(true);
-      const hideDiscover = document.getElementById('hide-discover-btn') as HTMLInputElement | null;
-      if (hideDiscover) {
-        hideDiscover.checked = true; // Check the checkbox if scrolling back up
-      }
+    } else{
+      this.isDiscoverVisible.set(false)
     }
   }
 }
