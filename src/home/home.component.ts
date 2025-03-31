@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentYear: number = new Date().getFullYear();
 
   private onScroll = () => {
-    console.log('Scroll detected'); 
     const menu = document.getElementById('menu') as HTMLElement | null;
     if (menu) {
       if (window.scrollY > 100) {
@@ -21,7 +20,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         menu.style.visibility = 'visible';
       } else {
         this.isDiscoverVisible.set(false);
-        console.log('isDiscoverVisible', this.isDiscoverVisible()); 
         menu.style.height = '0';
         menu.style.visibility = 'hidden';
       }
@@ -52,7 +50,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent): void {
     const menu = document.getElementById('menu');
-    console.log("event.clientY", event.clientY);
     if (menu) {
       if (event.clientY <= 50) {
         menu.style.height = '100px';
