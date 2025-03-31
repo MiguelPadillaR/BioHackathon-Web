@@ -8,8 +8,13 @@ import { Component, OnInit, OnDestroy, HostListener, signal, WritableSignal } fr
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
-
+  /**
+   * Flag for Discover section animation
+   */
   isDiscoverVisible: WritableSignal<boolean> = signal(true);
+  /**
+   * Current year for footer section
+   */
   currentYear: number = new Date().getFullYear();
 
   private onScroll = () => {

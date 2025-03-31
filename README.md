@@ -38,7 +38,7 @@ To get more help on the Angular CLI use `ng help` or check out the [Angular CLI 
 </details>
 
 ## Deployment Guide
-
+A guide to deploy the Web on to Github pages. Must be done from the `main`branch, but works on any branch if we want to see it updated.
 <details>
   <summary><strong>Expand</strong></summary>
 
@@ -56,7 +56,7 @@ ng deploy --base-href=/BioHackathon-Web/
  ```
 
  ### 3. Go to the url:
- In our case is:
+ Usually, URL's in Gihub pages follow this model: `https://USER_NAME.github.io/PROJECT_NAME/`. In our case, the URL is:
  - [https://miguelpadillar.github.io/BioHackathon-Web/](https://miguelpadillar.github.io/BioHackathon-Web/)
 
   </details>
