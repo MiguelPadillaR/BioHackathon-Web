@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         setTimeout(() => {
           document.body.style.pointerEvents = 'auto';
           document.body.style.overflow = '';
-        }, 2000);
+        }, 1100);
         
       } else if (window.scrollY <= 100 && discoverSection.style.height !== 'auto') {
         discoverSection.style.height = '100vh';

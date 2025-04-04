@@ -61,6 +61,7 @@ nav {
         }
     }
     .logo img{
+        margin-top: 15px;
         width: 250px;
     }
 
@@ -337,7 +338,8 @@ nav {
             .team-member-photo img {
                 width: 100%;
                 max-width: auto;
-                height: auto; 
+                height: auto;
+                max-height: 500px; 
                 object-fit: cover;
                 border: solid var(--light-color);
                 border-radius: 10%;
@@ -381,7 +383,6 @@ nav {
     height: 100vh;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    margin-bottom: -100px;
 
 
     .contact-section-content {
