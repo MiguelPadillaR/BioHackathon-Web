@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo: './assets/img/Foto_Nina-Souto-Blanco.jpg',
       name: 'Nina Souto Blanco',
       title: 'BioFounder',
-      description: `Biochemistry student at Universidad de Málaga. Passioned for biomedicine and the study of human diseases, I focus my formation in the use of bioinformatic tools to impulse research, optimize clinical diagnosis and contribute to improve the health and quality of life of people.`,
+      description: `Biochemistry student at Universidad de Málaga. Passionate for biomedicine and the study of human diseases, I focus my formation in the use of bioinformatic tools to impulse research, optimize clinical diagnosis and contribute to improve the health and quality of life of people.`,
     },
     {
       photo: './assets/img/Foto_Miguel-Leonardo-Padilla-Romo.jpeg',
