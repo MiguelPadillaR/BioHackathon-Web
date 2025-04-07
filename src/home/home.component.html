@@ -66,16 +66,16 @@
           <div class="team-section-members">
             @for (member of teamMembers; track $index) {
                 <div class="team-member">
-                <div class="team-member-photo">
-                    <img [src]="member.photo" [alt]="member.name">
-                </div>
-                <div class="team-member-title">
-                    <h4>{{ member.name }}</h4>
-                    <h5>{{ member.title }}</h5>
-                </div>
-                <div class="team-member-description">
-                    <p>{{ member.description }}</p>
-                </div>
+                  <div class="team-member-photo">
+                      <img [src]="member.photo" [alt]="member.name">
+                  </div>
+                  <div class="team-member-title">
+                      <h4>{{ member.name }}</h4>
+                      <h5>{{ member.title }}</h5>
+                  </div>
+                  <div class="team-member-description">
+                      <p>{{ member.description }}</p>
+                  </div>
                 </div>
             }
           </div>
