@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo: './assets/img/default_user.png',
       name: 'Isabel Fernández',
       title: 'BioFounder',
-      description: `Biology student at Univerdad de Málaga. I am passionateabout genomic and protein analuysis to deepen our understanding of dieeases and develop new biomedical tools. I would like to apply biological data processing to improve all health-related research.`,
+      description: `Biology student at Universidad de Málaga. I am passionate about genomic and protein analysis to deepen our understanding of diseases and develop new biomedical tools. I would like to apply biological data processing to improve all health-related research.`,
     },
     {
       photo: './assets/img/Foto-Maria_Bonafonte.jpeg',
