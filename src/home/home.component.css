@@ -49,19 +49,34 @@ nav {
     top: 0; left: 0; right: 0;
     padding: 0 5%;
     max-height: 100px;
-    background-color: #f9f9f9;
+    background-color: rgba(249, 249, 249, 0.8);
+    backdrop-filter: blur(10px); 
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease-in-out;
+    /* Transición de opacidad y blur para los elementos dentro de la Navbar */
+    nav .list a,
+    nav .logo img,
+    nav .icon-bars {
+        transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out; /* Transición para opacidad y blur */
+        opacity: 1; /* Opacidad por defecto */
+    }
+
+    /* Cuando la Navbar está oculta (visibility: hidden), aplicar blur y reducir opacidad */
+    nav[style*="visibility: hidden"] .list a,
+    nav[style*="visibility: hidden"] .logo img,
+    nav[style*="visibility: hidden"] .icon-bars {
+        opacity: 0; /* Reducir opacidad */
+        filter: blur(5px); /* Aplicar blur */
+    }
+
 
     .logo {
         img {
-            max-width: 300px;
+            margin-top: 15px;
+            max-width: 250px;
         }
-    }
-    .logo img{
-        width: 250px;
     }
 
     .list {
@@ -167,6 +182,7 @@ nav {
         height: calc(100vh - 100px);
     }
 }
+
 #discover {
     background-image: url("https://igemmunich.mwn.de/wp-content/uploads/2023/04/igem-logo-white.png");
     background-repeat: no-repeat;
@@ -199,7 +215,8 @@ nav {
         img {
             height: 2em; 
             vertical-align: baseline;
-            transform: translateY(0.25em); 
+            margin-left: -60px;
+            transform: translateY(0.28em); 
         }
     }
     h2 {
@@ -214,16 +231,19 @@ nav {
 }
 
  #welcome{
-    margin-top: 255px;
+    margin-top: 100px;
     text-align: center;
     img {
         margin-top: 2rem;
         margin-bottom: -3rem;
         vertical-align: baseline;
     }
-    h2 { font-size: 2rem; }
-    p { font-size: 1.7rem; }
-
+    h2 { 
+        font-size: 2rem;
+    }
+    p { 
+        font-size: 1.7rem;
+    }
     .welcome-section-header {
         h2 {
             font-family: 'Oswald', sans-serif;
@@ -241,53 +261,94 @@ nav {
 #idea-born-title{
     margin-top: 70px;
 }
+#highlight {
+  background-color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  padding: 0px 2rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 
-#highlight{
-    background-color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-style: italic;
-    padding: 0px 2rem;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    .highlighted-section-content{
-        max-width: 1700px;
-        margin: 0 auto;
-        .higlighted-section-main-text {
-            h1 {
-                margin-left: 1rem;
-                font-size: 4rem;
-                padding-top: 2rem;
-                text-align: left;
-            }
-        }
-        .highlighted-section-subtext {
-            width: 75%;
-            margin-left: auto;
-            margin-right: 2rem;
-            h2 {
-                font-size: 2.5rem;
-                text-align: right;
-            }
-        }
-        .higlighted-section-foot-text {
-            h3 {
-                font-size: 2rem;
-                margin-right: 2rem;
-                text-align: right;
-                padding-bottom: 1rem;
-                align-items: flex-end;
-                img {
-                    height: 3em; 
-                    vertical-align: baseline;
-                    transform: translateY(0.85em);
-                    margin-right: -2.5rem; 
-                }
-        
-            }
-        }
-    
+  .highlighted-section-content {
+    max-width: 1700px;
+    margin: 0 auto;
+
+    .highlighted-section-main-text {
+      h1 {
+        margin-left: 1rem;
+        font-size: 4rem;
+        padding-top: 2rem;
+        text-align: left;
+      }
     }
-} 
+
+    .highlighted-section-subtext {
+      width: 75%;
+      margin-left: auto;
+      margin-right: 2rem;
+
+      h2 {
+        font-size: 2.5rem;
+        text-align: right;
+      }
+    }
+
+    .highlighted-section-foot-text {
+      h3 {
+        font-size: 2rem;
+        margin-right: 2rem;
+        text-align: right;
+        padding-bottom: 1rem;
+        align-items: flex-end;
+
+        img {
+          height: 3em;
+          vertical-align: baseline;
+          transform: translateY(0.85em);
+          margin-right: -2.5rem;
+        }
+      }
+    }
+  }
+
+    @media screen and (max-width: 768px) {
+        .highlighted-section-content {
+            padding: 0 1rem;
+
+            .highlighted-section-main-text {
+                h1 {
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-left: 0;
+                }
+            }
+
+            .highlighted-section-subtext {
+                width: 100%;
+                margin: 1rem auto;
+                h2 {
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+
+            .highlighted-section-foot-text {
+                h3 {
+                    font-size: 1.2rem;
+                    text-align: center;
+                    margin-right: 0;
+
+                    img {
+                    height: 2em;
+                    transform: translateY(0.5em);
+                    margin-right: -1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+    
 
 #team {
     min-height: 100vh;
@@ -300,7 +361,7 @@ nav {
 
         h3 {
             font-family: 'Oswald', sans-serif;
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 5vw, 3.5rem); /* Escala entre 2rem y 3.5rem según el ancho de la pantalla */
             margin-bottom: 2%;
             color: var(--primary-color);
         }
@@ -308,21 +369,23 @@ nav {
 
     .team-section-members {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-        gap: 2%;
+        grid-template-columns: repeat(5, 1fr); /* 5 columnas fijas */
+        gap: 2%; /* Espaciado */
         padding: 0 1%;
+        max-width: 90vw; 
+        margin: 0 auto; 
 
         .team-member {
             background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 1vw; 
+            box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.1); 
             padding: 3%;
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             &:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+                transform: translateY(-1vw); 
+                box-shadow: 0 0.8vw 1.6vw rgba(0,0,0,0.15);
                 .team-member-description p, .team-member-title h5  {
                     color: var(--primary-color);
                     transition: ease-in-out 0.3s;
@@ -331,24 +394,25 @@ nav {
 
             .team-member-photo img {
                 width: 100%;
-                max-width: 360px; /* limita el ancho */
+                max-width: 18vw; /* Ajustado para 5 columnas (menor ancho por miembro) */
                 height: auto; 
+                max-height: 400px; 
                 object-fit: cover;
                 border: solid var(--light-color);
                 border-radius: 10%;
-                margin-bottom: 10%;
+                margin-bottom: 5%; /* Margen relativo */
             }
 
             .team-member-title {
                 h4{
-                    font-size: 1.5rem;
+                    font-size: clamp(0.9rem, 2vw, 1.5rem);
                     font-weight: 600;
                     color: var(--primary-color);
                     margin-bottom: 2%;
                 }
 
                 h5{
-                    font-size: 1rem;
+                    font-size: clamp(0.7rem, 1.5vw, 1rem);;
                     font-weight: 600;
                     color: var(--primary-color);
                     margin-bottom: 2%;
@@ -360,12 +424,13 @@ nav {
                 border: none;
                 background-color: #fff;
                 border-radius: 20pt;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 color: #555;
                 line-height: 1.4;
-                padding: 3%;
-                
+                padding: 10px;
             }
+
+
         }
     }
 }
@@ -376,7 +441,6 @@ nav {
     height: 100vh;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    margin-bottom: -100px;
 
 
     .contact-section-content {

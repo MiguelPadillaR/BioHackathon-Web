@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="home.component.css">
 <body>
-    <nav id="menu">
-        <div class="logo">
+    <nav id="navbar">
+        <div class="logo"> 
             <a href="#"><img src="./assets/logo/no-bg/logo-2.png" alt=""></a>
         </div>
         <label for="toggle" class="icon-bars">
@@ -10,7 +10,7 @@
             <div class="icons-bars-line"></div>
         </label>
         <ul class="list">
-            <li><a id="welcome-id" href="#" (click)="makeDiscoverSectionVisible()">Home</a></li>
+            <li><a id="welcome-id" href="#">Home</a></li>
             <li><a id="project-id" href="#welcome">Project</a></li>
             <li><a id="team-id" href="#team">Team</a></li>
             <li><a id="contact-id" href="#contact">Contact Us</a></li>
@@ -42,7 +42,7 @@
 
     <div id="highlight" class="highlighted-section">
         <div class="highlighted-section-content">
-            <div class="higlighted-section-main-text">
+            <div class="highlighted-section-main-text">
                 <h1>
                     Empowering researchers with custom solutions.
                 </h1>
@@ -52,7 +52,7 @@
                     Enabling teams and companies alike to achieve improved performance through tailored synthetic biology tools.
                 </h2>
             </div>
-            <div class="higlighted-section-foot-text">
+            <div class="highlighted-section-foot-text">
                 <h3>
                     <img src="./assets/logo/no-bg/logo5.png" alt=""> – The catalyst your next biosciences breakthrough needs.
                 </h3>
@@ -62,68 +62,26 @@
 
     <div id="team" class="team-section">
         <div class="team-section-header">
-            <h3>Meet the team</h3>
-            <div class="team-section-members">
+          <h3>Meet the team</h3>
+          <div class="team-section-members">
+            @for (member of teamMembers; track $index) {
                 <div class="team-member">
-                    <div class="team-member-photo">
-                        <img src="./assets/img/Foto_Juan-Antonio-de-la-Cruz-Bellido.jpeg" alt="">
-                    </div>
-                    <div class="team-member-title">
-                        <h4>Juan Antonio de la Cruz Bellido</h4>
-                        <h5>Founder & CEO</h5>
-                    </div>
-                    <div class="team-member-description">
-                        <p>
-                            Biology student at Universidad de Málaga, with great interest for and some experience in synthetic biology, bioinformatics (within the genomic and protein engineering fields) as well as bioentrepreneurship, focused on team leadership and achieving advancements on the research world.
-                        </p>
-                    </div>
+                  <div class="team-member-photo">
+                      <img [src]="member.photo" [alt]="member.name">
+                  </div>
+                  <div class="team-member-title">
+                      <h4>{{ member.name }}</h4>
+                      <h5>{{ member.title }}</h5>
+                  </div>
+                  <div class="team-member-description">
+                      <p>{{ member.description }}</p>
+                  </div>
                 </div>
-                <div class="team-member">
-                    <div class="team-member-photo">
-                        <img src="./assets/img/Foto_Nina-Souto-Blanco.jpg" alt="">
-                    </div>
-                    <div class="team-member-title">
-                        <h4>Nina Souto Blanco</h4>
-                        <h5>Co-founder</h5>
-                    </div>
-                    <div class="team-member-description">
-                        <p> 
-                            Biochemistry student at Universidad de Málaga. Passioned for biomedicine and the study of human diseases, I focus my formation in the use of bioinformatic tools to impulse research, optimize clinical diagnosis and contribute to improve the health and quality of life of people.
-                        </p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">
-                        <img src="./assets/img/Foto_Miguel-Leonardo-Padilla-Romo.jpeg" alt="">
-                    </div>
-                    <div class="team-member-title">
-                        <h4>Miguel Padilla</h4>
-                        <h5>Co-founder</h5>
-                    </div>
-                    <div class="team-member-description">
-                        <p>
-                            Health Engineering student at Universidad de Málaga, specialized in bioinformatics and interested in web development. I began my career developing a customized genomic data exploration tool to support researchers in their work. I am passionate about helping scientists achieve meaningful breakthroughs.
-                        </p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="team-member-photo">
-                        <img src="./assets/img/Foto_Sofia-Zafirova.jpg" alt="">
-                    </div>
-                    <div class="team-member-title">
-                        <h4>Sofía Zafirova</h4>
-                        <h5>Co-founder</h5>
-                    </div>
-                    <div class="team-member-description">
-                        <p>
-                            Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.
-                        </p>
-                    </div>
-                </div>
-            </div>
+            }
+          </div>
         </div>
-    </div>
-    <div id="contact" class="contact-section">
+      </div>
+          <div id="contact" class="contact-section">
         <div class="contact-section-content">
             <div class="contact-section-header">
                 <h1>Contact Us</h1>
