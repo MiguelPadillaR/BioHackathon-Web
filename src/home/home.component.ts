@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo: './assets/img/Foto_Sofia-Zafirova.jpg',
       name: 'Sofía Zafirova',
       title: 'BioFounder',
-      description: `Biology student at universidad de Málaga, passioned about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
+      description: `Biology student at universidad de Málaga, passionate about the field of diagnosis and research of the human body. My main interest is focused on making known and explaining the fundamental use of modern-day bioinformatics in facilitating the work of people belonging to the scientific sector.`,
     },
     {
       photo: './assets/img/default_user.png',
