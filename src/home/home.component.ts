@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       photo: './assets/img/default_user.png',
       name: 'Juan Diego López',
       title: 'BioFounder',
-      description: `Biochemistry student at University de Málaga. I feel a special inclination towards bioinformatics, specially focused on analyzing biological data of any kind, and applied to automated classification systems and virtual data analysis. All centered around impulsing biology research, biochemstry and biotechnology.`,
+      description: `Biochemistry student at University de Málaga. I feel a special inclination towards bioinformatics, specially focused on analyzing biological data of any kind, and applied to automated classification systems and virtual data analysis. All centered around impulsing biology research, biochemistry and biotechnology.`,
     },
     {
       photo: './assets/img/default_user.png',
