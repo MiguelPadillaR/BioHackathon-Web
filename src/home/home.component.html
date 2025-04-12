@@ -73,7 +73,7 @@
                       <h4>{{ member.name }}</h4>
                       <h5>{{ member.title }}</h5>
                   </div>
-                  <div class="team-member-icons">
+                  <div class="team-member-icons" (click)="$event.stopPropagation()">
                         <a href="mailto:{{ member.mail }}" target="_blank">
                             <img src="./assets/icon/mail-icon.png" alt="Send email">
                         </a>
