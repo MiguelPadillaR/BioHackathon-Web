@@ -129,7 +129,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         }, 1100);
       } else if (window.scrollY <= 100 && discoverSection.style.height === '0px') {
         this.isDiscoverVisible.set(true);
-        discoverSection.style.height = '100vh';
+        discoverSection.style.height = '120vh';
         discoverSection.style.transform = '';
       }
     }
