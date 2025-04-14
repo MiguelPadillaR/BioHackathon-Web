@@ -424,17 +424,6 @@ nav {
                 }
                 
             }
-
-            .team-member-description p {
-                border: none;
-                background-color: #fff;
-                border-radius: 20pt;
-                font-size: 1.1rem;
-                color: #555;
-                line-height: 1.4;
-                padding: 10px;
-            }
-
             .team-member-icons {
                 align-items: center;
                 display: flex;
