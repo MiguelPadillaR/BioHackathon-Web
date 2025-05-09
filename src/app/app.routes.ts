@@ -5,7 +5,7 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent,
-        title: 'BioHackathon Web'
+        title: 'Synbio CATaLyST'
     },
 
 ];

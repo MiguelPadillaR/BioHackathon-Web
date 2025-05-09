@@ -52,11 +52,11 @@ ng add angular-cli-ghpages
  Use the `ng deploy --base-href=/PROJECT_NAME/` command. Keep the `/` in. If you don't know the name of your project, look into the `tsconfig.json` file of your project. In our case, it will be
 
  ```
-ng deploy --base-href=/BioHackathon-Web/
+ng deploy --base-href=/Web-page/
  ```
 
  ### 3. Go to the url:
- Usually, URL's in Gihub pages follow this model: `https://USER_NAME.github.io/PROJECT_NAME/`. In our case, the URL is:
- - [https://miguelpadillar.github.io/BioHackathon-Web/](https://miguelpadillar.github.io/BioHackathon-Web/)
+ Usually, URL's in Gihub pages follow this model: `https://USER_NAME.github.io/REPO_NAME/`. In our case, the URL is:
+ - [https://synbio-catalyst.github.io/Web-Page/](https://synbio-catalyst.github.io/Web-Page/)
 
   </details>

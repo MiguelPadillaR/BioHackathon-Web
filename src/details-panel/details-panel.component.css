@@ -9,7 +9,12 @@
   overflow: auto;
 
   .details-panel-container {
-    background-color: white;
+    background-image:linear-gradient(to bottom,#dcd8d8e8,50%,#a6a6a6e8), url("../assets/img/discover-bg5.png");
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     padding: 1rem;
     border-radius: 12px;
     width: 90%;

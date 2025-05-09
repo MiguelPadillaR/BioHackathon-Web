@@ -265,24 +265,29 @@ nav {
 }
 
 #highlight {
-  background-color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-style: italic;
-  padding: 0px 2rem;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+    background-image:linear-gradient(#dcd8d8e8,50%,#a6a6a6e8), url("../assets/img/discover-bg1.jpg");
+    background-blend-mode: screen;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
 
-  .highlighted-section-content {
-    max-width: 1700px;
-    margin: 0 auto;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
+    padding: 0px 2rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 
-    .highlighted-section-main-text {
-      h1 {
-        margin-left: 1rem;
-        font-size: 4rem;
-        padding-top: 2rem;
-        text-align: left;
-      }
+    .highlighted-section-content {
+        max-width: 1700px;
+        margin: 0 auto;
+
+        .highlighted-section-main-text {
+        h1 {
+            margin-left: 1rem;
+            font-size: 4rem;
+            padding-top: 2rem;
+            text-align: left;
+        }
     }
 
     .highlighted-section-subtext {
@@ -377,7 +382,12 @@ nav {
         margin: 0 auto; 
 
         .team-member {
-            background: #fff;
+            background-image:linear-gradient(#dcd8d8e8,50%,#a6a6a6e8), url("../assets/img/discover-bg4.png");
+            background-blend-mode: screen;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
             border-radius: 1vw; 
             box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.1); 
             padding: 10px;
